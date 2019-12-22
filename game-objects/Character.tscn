@@ -7,7 +7,7 @@
 [sub_resource type="CircleShape2D" id=1]
 radius = 7.35147
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 resource_name = "walk_down"
 length = 3.0
 loop = true
@@ -24,7 +24,7 @@ tracks/0/keys = {
 "values": [ 24, 51, 78 ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 resource_name = "walk_right"
 length = 3.0
 loop = true
@@ -41,8 +41,7 @@ tracks/0/keys = {
 "values": [ 26, 53, 80 ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "walk_up"
+[sub_resource type="Animation" id=4]
 length = 3.0
 loop = true
 tracks/0/type = "value"
@@ -59,7 +58,7 @@ tracks/0/keys = {
 }
 
 [node name="Character" type="Node2D"]
-scale = Vector2( 2.58457, 2.58457 )
+scale = Vector2( 5, 5 )
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -77,7 +76,7 @@ frame = 23
 script = ExtResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/walk_down = SubResource( 3 )
+anims/walk_down = SubResource( 2 )
 anims/walk_left = ExtResource( 3 )
-anims/walk_right = SubResource( 4 )
-anims/walk_up = SubResource( 2 )
+anims/walk_right = SubResource( 3 )
+anims/walk_up = SubResource( 4 )

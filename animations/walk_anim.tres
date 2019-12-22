@@ -1,4 +1,6 @@
-[gd_resource type="Animation" format=2]
+[gd_resource type="Animation" load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
 
 [resource]
 resource_name = "walk_left"
@@ -16,3 +18,4 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 23, 50, 77 ]
 }
+script = SubResource( 1 )

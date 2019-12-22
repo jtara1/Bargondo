@@ -8,12 +8,15 @@ onready var animation_player = $"../AnimationPlayer"
 var movement = Vector2()
 
 func _ready():
-	animation_player.playback_speed = 0.02 * speed
+	animation_player.playback_speed = 0.03 * speed
 
 func _physics_process(delta):
 	parent.position += movement * speed * delta
 
 func _process(delta):
+	read_inputs()
+	
+func read_inputs():
 	movement = Vector2()
 	var animation = ""
 	
