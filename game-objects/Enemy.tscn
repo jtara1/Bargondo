@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scripts/enemy/Enemy.gd" type="Script" id=1]
 [ext_resource path="res://sprites/background/tilemap.png" type="Texture" id=2]
@@ -11,6 +11,23 @@
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 7.35147
+
+[sub_resource type="Animation" id=2]
+resource_name = "glow_red"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0.427451, 0.427451, 1 ) ]
+}
 
 [node name="Enemy" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -35,12 +52,6 @@ anims/walk_right = ExtResource( 6 )
 anims/walk_up = ExtResource( 7 )
 script = ExtResource( 8 )
 
-[node name="MovementTargets" type="Node2D" parent="."]
-
-[node name="Target" type="Node2D" parent="MovementTargets"]
-
-[node name="Target2" type="Node2D" parent="MovementTargets"]
-position = Vector2( 292.782, 0 )
-
-[node name="Target3" type="Node2D" parent="MovementTargets"]
-position = Vector2( 292.782, 125.436 )
+[node name="ColorPlayer" type="AnimationPlayer" parent="."]
+autoplay = "glow_red"
+anims/glow_red = SubResource( 2 )

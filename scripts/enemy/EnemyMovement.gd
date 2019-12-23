@@ -3,10 +3,10 @@ extends Node2D
 export(float) var close_enough_to_target_threshold = 25
 
 var target_index = 0
-var movement_targets = []
 
 onready var parent = $"../"
 onready var speed = parent.speed
+onready var movement_targets = [parent.position]
 
 func _ready():
 	load_movement_targets()
@@ -34,5 +34,10 @@ func get_movement_target():
 	return movement_targets[target_index]
 	
 func load_movement_targets():
-	for child in $"../MovementTargets".get_children():
+	var targets_container = $"../MovementTargets"
+	if not targets_container:
+		print_debug("Enemy: needs MovementTargets Node2D & children for it")
+		return
+		
+	for child in targets_container.get_children():
 		movement_targets.append(child.global_position)
