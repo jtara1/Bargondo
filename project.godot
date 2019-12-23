@@ -64,6 +64,10 @@ skill3={
  ]
 }
 
+[memory]
+
+limits/message_queue/max_size_kb=2048
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
