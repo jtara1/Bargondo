@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://sprites/items/Pizza - 1.png" type="Texture" id=1]
+
+[sub_resource type="DynamicFontData" id=1]
+antialiased = false
+font_path = "res://fonts/The Delicate DEMO.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 64
+use_filter = true
+font_data = SubResource( 1 )
+
+[node name="GameUI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 40.0
+margin_top = -120.0
+margin_bottom = -40.0
+
+[node name="Panel" type="Panel" parent="NinePatchRect"]
+margin_left = 9.7054
+margin_top = -26.4089
+margin_right = 189.705
+margin_bottom = 53.5911
+rect_scale = Vector2( 1.21032, 1.21032 )
+
+[node name="TextureRect" type="TextureRect" parent="NinePatchRect/Panel"]
+margin_left = 16.0
+margin_right = 80.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 64, 80 )
+texture = ExtResource( 1 )
+stretch_mode = 6
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NinePatchRect/Panel"]
+margin_left = 94.8667
+margin_top = 19.6223
+margin_right = 204.867
+margin_bottom = 99.6223
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/normal_font = SubResource( 2 )
+text = "0/3"
