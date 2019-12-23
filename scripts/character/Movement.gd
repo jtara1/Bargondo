@@ -1,9 +1,8 @@
 extends Node2D
 
-export(float) var speed = 150
-
 onready var parent = $"../"
 onready var animation_player = $"../AnimationPlayer"
+onready var speed = parent.speed
 
 var movement = Vector2()
 

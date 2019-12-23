@@ -70,7 +70,7 @@ shape = SubResource( 1 )
 texture = ExtResource( 2 )
 vframes = 18
 hframes = 27
-frame = 26
+frame = 24
 
 [node name="Movement" type="Node2D" parent="."]
 script = ExtResource( 3 )
