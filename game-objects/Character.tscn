@@ -60,10 +60,13 @@ tracks/0/keys = {
 [node name="Character" type="Node2D"]
 scale = Vector2( 5, 5 )
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+editor/display_folded = true
+scale = Vector2( 1, 1 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
 position = Vector2( 0.226246, 0.961548 )
+scale = Vector2( 1, 1 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
