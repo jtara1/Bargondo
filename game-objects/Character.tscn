@@ -2,7 +2,7 @@
 
 [ext_resource path="res://sprites/background/tilemap.png" type="Texture" id=1]
 [ext_resource path="res://scripts/character/Movement.gd" type="Script" id=2]
-[ext_resource path="res://animations/walk_anim.tres" type="Animation" id=3]
+[ext_resource path="res://animations/Character/walk_left.tres" type="Animation" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 7.35147
@@ -70,7 +70,6 @@ hframes = 27
 frame = 26
 
 [node name="Movement" type="Node2D" parent="."]
-scale = Vector2( 5, 5 )
 script = ExtResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

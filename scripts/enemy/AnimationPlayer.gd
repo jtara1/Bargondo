@@ -28,7 +28,7 @@ func play_based_on_delta_movement():
 func load_animations():
 	for animation_name in get_animation_list():
 		var animation = get_animation(animation_name)
-		animation.remove_track(0)
+#		animation.remove_track(0)
 		
 		var track_index = animation.add_track(Animation.TYPE_VALUE)
 		animation.track_set_interpolation_type(track_index, Animation.INTERPOLATION_NEAREST)
