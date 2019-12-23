@@ -1,6 +1,5 @@
 extends Area2D
-
-onready var Character = load("res://game-objects/Character.tscn")
+class_name Pizza
 
 func _on_Pizza_body_entered(body):
 	if body is Character:

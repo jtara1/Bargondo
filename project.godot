@@ -8,9 +8,20 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "Character",
+"language": "GDScript",
+"path": "res://scripts/character/Character.gd"
+}, {
+"base": "Area2D",
+"class": "Pizza",
+"language": "GDScript",
+"path": "res://scripts/Pizza.gd"
+} ]
 _global_script_class_icons={
-
+"Character": "",
+"Pizza": ""
 }
 
 [application]

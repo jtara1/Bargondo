@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://tilemaps/KenneyStreets.tres" type="TileSet" id=1]
 [ext_resource path="res://game-objects/Character.tscn" type="PackedScene" id=2]
 [ext_resource path="res://game-objects/Enemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://game-objects/Pizza.tscn" type="PackedScene" id=4]
 
 [node name="Level_0" type="Node2D"]
 
@@ -39,3 +40,6 @@ tile_data = PoolIntArray( 0, 7274539, 0, 96, 0, 0, 97, 0, 0, 98, 0, 0, 100, 0, 0
 
 [node name="Enemy" parent="." instance=ExtResource( 3 )]
 position = Vector2( 310.035, 1067.1 )
+
+[node name="Pizza" parent="." instance=ExtResource( 4 )]
+position = Vector2( 215.592, 1157.06 )
