@@ -1,6 +1,6 @@
 extends Node2D
 
-export(float) var speed = 100
+export(float) var speed = 150
 
 onready var parent = $"../"
 onready var animation_player = $"../AnimationPlayer"
@@ -11,7 +11,7 @@ func _ready():
 	animation_player.playback_speed = 0.03 * speed
 
 func _physics_process(delta):
-	parent.position += movement * speed * delta
+	parent.move_and_slide(movement * speed)
 
 func _process(delta):
 	read_inputs()
