@@ -58,7 +58,7 @@ tracks/0/keys = {
 }
 
 [node name="Character" type="KinematicBody2D"]
-scale = Vector2( 0.8, 0.8 )
+scale = Vector2( 0.4, 0.4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0.226246, 0.961548 )

@@ -60,7 +60,7 @@ tracks/0/keys = {
 }
 
 [node name="Enemy" type="KinematicBody2D"]
-scale = Vector2( 0.8, 0.8 )
+scale = Vector2( 0.4, 0.4 )
 script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -92,7 +92,7 @@ scale = Vector2( 1, 1 )
 [node name="Target" type="Node2D" parent="MovementTargets"]
 
 [node name="Target2" type="Node2D" parent="MovementTargets"]
-position = Vector2( 83.7228, 0 )
+position = Vector2( 292.782, 0 )
 
 [node name="Target3" type="Node2D" parent="MovementTargets"]
-position = Vector2( 83.7228, 48.4385 )
+position = Vector2( 292.782, 125.436 )
