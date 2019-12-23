@@ -11,6 +11,8 @@ func _process(delta):
 	
 func play_based_on_delta_movement():
 	var delta = parent.position - last_position
+	update_animation_play_speed(delta.length())
+	
 	var use_horizontal = abs(delta.x) > abs(delta.y)
 	var animation = ""
 	
@@ -28,7 +30,7 @@ func play_based_on_delta_movement():
 func load_animations():
 	for animation_name in get_animation_list():
 		var animation = get_animation(animation_name)
-#		animation.remove_track(0)
+		animation.remove_track(0)
 		
 		var track_index = animation.add_track(Animation.TYPE_VALUE)
 		animation.track_set_interpolation_type(track_index, Animation.INTERPOLATION_NEAREST)
@@ -49,3 +51,6 @@ func load_animations():
 		animation.track_insert_key(track_index, 0, (hframes - 1 + offset) + 27 * 9)
 		animation.track_insert_key(track_index, 1, (hframes - 1 + offset) + 27 * 10)
 		animation.track_insert_key(track_index, 2, (hframes - 1 + offset) + 27 * 11)
+
+func update_animation_play_speed(delta_distance: float):
+	playback_speed = delta_distance
