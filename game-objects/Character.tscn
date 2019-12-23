@@ -58,14 +58,12 @@ tracks/0/keys = {
 }
 
 [node name="Character" type="KinematicBody2D"]
-scale = Vector2( 0.4, 0.4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0.226246, 0.961548 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-scale = Vector2( 5, 5 )
 texture = ExtResource( 1 )
 vframes = 18
 hframes = 27
