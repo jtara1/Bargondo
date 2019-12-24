@@ -9,3 +9,4 @@
 | Hungry Dino (9 chiptune tracks, 10 SFX) | SketchyLogic | https://opengameart.org/content/hungry-dino-9-chiptune-tracks-10-sfx | music |
 | Rabbit Eating | Voltiment555 | https://opengameart.org/content/rabbit-eating | collectable collected sound |
 | Pixel Explosion | J-Robot | https://opengameart.org/content/pixel-explosion-12-frames | explosion vfx |
+| Color Background Pack 1 | Eon Cire | https://opengameart.org/content/color-background-pack-1 | main menu bg texture |
