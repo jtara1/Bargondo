@@ -46,18 +46,17 @@ tile_data = PoolIntArray( 0, 7274539, 0, 96, 0, 0, 97, 0, 0, 98, 0, 0, 100, 0, 0
 script = ExtResource( 2 )
 
 [node name="Character" parent="." instance=ExtResource( 3 )]
-position = Vector2( 127.962, 1127.27 )
+position = Vector2( 29.6914, 1311.43 )
 z_index = 5
 
 [node name="RespawnFlag" parent="." instance=ExtResource( 4 )]
-position = Vector2( 128.052, 1126.8 )
+position = Vector2( 29.7814, 1310.96 )
 
 [node name="Enemies" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Enemy" parent="Enemies" instance=ExtResource( 5 )]
 editor/display_folded = true
-position = Vector2( 149.573, 1108.41 )
+position = Vector2( 25.7675, 1219.06 )
 
 [node name="MovementTargets" type="Node2D" parent="Enemies/Enemy"]
 
@@ -70,6 +69,7 @@ editor/display_folded = true
 position = Vector2( 8.42816, 1192.38 )
 
 [node name="ParkAreas" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="ParkArea" type="Area2D" parent="ParkAreas"]
 editor/display_folded = true
@@ -105,6 +105,7 @@ scale = Vector2( 0.860355, 19.2 )
 shape = SubResource( 1 )
 
 [node name="CityAreas" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="CityArea" type="Area2D" parent="CityAreas"]
 editor/display_folded = true
