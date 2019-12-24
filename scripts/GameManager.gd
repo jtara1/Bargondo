@@ -9,6 +9,9 @@ onready var character = $"../Character"
 onready var respawn_flag = $"../RespawnFlag"
 
 func _ready():
+	listen_to_character_death(character)
+	
+func listen_to_character_death(character):
 	character.connect("died", self, "_on_Character_died")
 	
 func _on_Character_died(character):
@@ -31,4 +34,5 @@ func _on_Explosion_animation_finished(anim_name):
 	self.character.queue_free()
 	level_node.add_child(new_character)
 	
+	listen_to_character_death(new_character)
 	self.character = new_character
