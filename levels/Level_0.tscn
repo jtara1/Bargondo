@@ -6,7 +6,9 @@
 [ext_resource path="res://game-objects/RespawnFlag.tscn" type="PackedScene" id=4]
 [ext_resource path="res://game-objects/Enemy.tscn" type="PackedScene" id=5]
 [ext_resource path="res://game-objects/Pizza.tscn" type="PackedScene" id=6]
-[ext_resource path="res://bgm/HappyLevel.wav" type="AudioStream" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 9.9701, 10 )
 
 [node name="Level_0" type="Node2D"]
 
@@ -63,7 +65,81 @@ position = Vector2( 149.573, 1108.41 )
 [node name="Pizza" parent="Pizzas" instance=ExtResource( 6 )]
 position = Vector2( 8.42816, 1192.38 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 7 )
-volume_db = -20.0
-autoplay = true
+[node name="ParkArea" type="Area2D" parent="."]
+position = Vector2( -101.649, 923.231 )
+scale = Vector2( 33.8, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParkArea"]
+position = Vector2( 8.68484, 291.648 )
+scale = Vector2( 0.860355, 19.2 )
+shape = SubResource( 1 )
+
+[node name="ParkArea2" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( 744.438, 912.353 )
+scale = Vector2( 19.1798, 0.278586 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParkArea2"]
+position = Vector2( 8.68484, 291.648 )
+scale = Vector2( 0.860355, 19.2 )
+shape = SubResource( 1 )
+
+[node name="ParkArea3" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( 571.159, 1091.05 )
+scale = Vector2( 34.4247, -0.144269 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParkArea3"]
+position = Vector2( 8.68484, 291.648 )
+scale = Vector2( 0.860355, 19.2 )
+shape = SubResource( 1 )
+
+[node name="CityArea" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( -176.295, 827.591 )
+scale = Vector2( 73.356, 0.2344 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CityArea"]
+position = Vector2( 8.68484, 291.648 )
+scale = Vector2( 0.860355, 19.2 )
+shape = SubResource( 1 )
+
+[node name="CityArea2" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( -170.463, 911.567 )
+scale = Vector2( 53.3534, 0.230734 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CityArea2"]
+position = Vector2( 8.68484, 291.648 )
+scale = Vector2( 0.860355, 19.2 )
+shape = SubResource( 1 )
+
+[node name="CityArea3" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( -172.463, 907.567 )
+scale = Vector2( 4.43267, 1.14657 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CityArea3"]
+position = Vector2( 8.68484, 291.648 )
+scale = Vector2( 0.860355, 19.2 )
+shape = SubResource( 1 )
+
+[node name="CityArea4" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( 481.532, 908.567 )
+scale = Vector2( 5.43194, 1.14657 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CityArea4"]
+position = Vector2( 8.68484, 291.648 )
+scale = Vector2( 0.860355, 19.2 )
+shape = SubResource( 1 )
+
+[node name="CityArea5" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( 574.631, 957.017 )
+scale = Vector2( 30.9042, 1.17595 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CityArea5"]
+position = Vector2( 8.68484, 291.648 )
+scale = Vector2( 0.860355, 19.2 )
+shape = SubResource( 1 )
