@@ -45,6 +45,8 @@ tile_data = PoolIntArray( 0, 7274539, 0, 96, 0, 0, 97, 0, 0, 98, 0, 0, 100, 0, 0
 [node name="GameManager" type="Node2D" parent="."]
 script = ExtResource( 2 )
 
+[node name="GameTimer" type="Timer" parent="GameManager"]
+
 [node name="Character" parent="." instance=ExtResource( 3 )]
 position = Vector2( 29.6914, 1311.43 )
 z_index = 5

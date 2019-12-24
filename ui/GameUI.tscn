@@ -1,7 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scripts/GameUI.gd" type="Script" id=1]
 [ext_resource path="res://sprites/items/Pizza - 1.png" type="Texture" id=2]
+[ext_resource path="res://sprites/human_tile_0024.png" type="Texture" id=3]
+[ext_resource path="res://sprites/tree_tile_0292.png" type="Texture" id=4]
+[ext_resource path="res://sprites/trash_can_tile_0280.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFontData" id=1]
 antialiased = false
@@ -11,6 +14,13 @@ font_path = "res://fonts/The Delicate DEMO.ttf"
 size = 64
 use_filter = true
 font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://fonts/The Delicate DEMO.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 9
+font_data = SubResource( 3 )
 
 [node name="GameUI" type="Control"]
 anchor_right = 1.0
@@ -25,14 +35,16 @@ margin_left = 40.0
 margin_top = -120.0
 margin_bottom = -40.0
 
-[node name="Panel" type="Panel" parent="NinePatchRect"]
+[node name="PizzaPanel" type="Panel" parent="NinePatchRect"]
+editor/display_folded = true
+self_modulate = Color( 1, 1, 1, 0.380392 )
 margin_left = 9.7054
 margin_top = -26.4089
 margin_right = 189.705
 margin_bottom = 53.5911
 rect_scale = Vector2( 1.21032, 1.21032 )
 
-[node name="TextureRect" type="TextureRect" parent="NinePatchRect/Panel"]
+[node name="TextureRect" type="TextureRect" parent="NinePatchRect/PizzaPanel"]
 margin_left = 16.0
 margin_right = 80.0
 margin_bottom = 80.0
@@ -40,11 +52,104 @@ rect_min_size = Vector2( 64, 80 )
 texture = ExtResource( 2 )
 stretch_mode = 6
 
-[node name="RichTextLabel" type="RichTextLabel" parent="NinePatchRect/Panel"]
+[node name="RichTextLabel" type="RichTextLabel" parent="NinePatchRect/PizzaPanel"]
 margin_left = 94.8667
 margin_top = 19.6223
 margin_right = 204.867
 margin_bottom = 99.6223
 rect_scale = Vector2( 0.8, 0.8 )
 custom_fonts/normal_font = SubResource( 2 )
-text = "0/3"
+text = "0/4"
+
+[node name="ControlsPanel" type="Panel" parent="NinePatchRect"]
+editor/display_folded = true
+self_modulate = Color( 1, 1, 1, 0.380392 )
+margin_left = 712.706
+margin_top = -26.4089
+margin_right = 892.705
+margin_bottom = 53.5911
+rect_scale = Vector2( 1.21032, 1.21032 )
+
+[node name="MarginContainer" type="MarginContainer" parent="NinePatchRect/ControlsPanel"]
+editor/display_folded = true
+margin_left = 22.7598
+margin_top = 2.16586
+margin_right = 62.7598
+margin_bottom = 42.1659
+rect_scale = Vector2( 2.2, 2.2 )
+custom_constants/margin_bottom = 0
+
+[node name="TextureRect" type="TextureRect" parent="NinePatchRect/ControlsPanel/MarginContainer"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 3 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NinePatchRect/ControlsPanel/MarginContainer"]
+margin_right = 40.0
+margin_bottom = 40.0
+custom_fonts/normal_font = SubResource( 4 )
+text = "
+ 
+  J"
+
+[node name="MarginContainer2" type="MarginContainer" parent="NinePatchRect/ControlsPanel"]
+editor/display_folded = true
+margin_left = 70.185
+margin_top = 2.16586
+margin_right = 110.185
+margin_bottom = 42.1659
+rect_scale = Vector2( 2.2, 2.2 )
+
+[node name="TextureRect" type="TextureRect" parent="NinePatchRect/ControlsPanel/MarginContainer2"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 4 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NinePatchRect/ControlsPanel/MarginContainer2"]
+margin_right = 40.0
+margin_bottom = 40.0
+custom_fonts/normal_font = SubResource( 4 )
+text = "
+  
+  K"
+
+[node name="MarginContainer3" type="MarginContainer" parent="NinePatchRect/ControlsPanel"]
+editor/display_folded = true
+margin_left = 119.42
+margin_top = 2.16586
+margin_right = 159.42
+margin_bottom = 42.1659
+rect_scale = Vector2( 2.2, 2.2 )
+
+[node name="TextureRect" type="TextureRect" parent="NinePatchRect/ControlsPanel/MarginContainer3"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 5 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NinePatchRect/ControlsPanel/MarginContainer3"]
+margin_right = 40.0
+margin_bottom = 40.0
+custom_fonts/normal_font = SubResource( 4 )
+text = "
+  
+  L"
+
+[node name="TimerPanel" type="Panel" parent="NinePatchRect"]
+self_modulate = Color( 1, 1, 1, 0.380392 )
+margin_left = 9.7054
+margin_top = -429.588
+margin_right = 189.705
+margin_bottom = -349.588
+rect_scale = Vector2( 1.21032, 1.21032 )
+
+[node name="TimerTextLabel" type="RichTextLabel" parent="NinePatchRect/TimerPanel"]
+margin_left = 59.1293
+margin_top = 11.7336
+margin_right = 239.129
+margin_bottom = 91.7336
+custom_fonts/normal_font = SubResource( 2 )
+text = "60"
+
+[node name="Timer" type="Timer" parent="NinePatchRect/TimerPanel/TimerTextLabel"]
+autostart = true
+[connection signal="timeout" from="NinePatchRect/TimerPanel/TimerTextLabel/Timer" to="." method="_on_Timer_timeout"]
