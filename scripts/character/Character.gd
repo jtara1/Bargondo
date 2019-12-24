@@ -13,9 +13,9 @@ func _physics_process(delta):
 	process_collisions()
 
 func consume(item):
-	# TODO: play sound 
 	emit_signal("item_consumed", item)
 	item.queue_free()
+	$AudioStreamPlayer2D.play(10)
 	
 func get_speed():
 	return speed * $CharacterCamo.camo.get_speed_mult()
