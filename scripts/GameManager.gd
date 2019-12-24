@@ -13,7 +13,7 @@ func _ready():
 	
 func _on_Character_died(character):
 	var character_position = character.position
-	character.queue_free()
+	character.visible = false
 	
 	explosion = Explosion.instance()
 	explosion.position = character_position
@@ -31,6 +31,8 @@ func _on_Explosion_animation_finished(anim_name):
 	var character = Character.instance()
 	character.position = respawn_flag.position
 	
+	character.queue_free()
 	level_node.add_child(character)
+	
 	self.character = character
 	
