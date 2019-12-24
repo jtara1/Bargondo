@@ -27,4 +27,5 @@ hframes = 12
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "explosion"
+playback_speed = 0.8
 anims/explosion = SubResource( 1 )

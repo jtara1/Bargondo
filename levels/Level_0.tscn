@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://tilemaps/KenneyStreets.tres" type="TileSet" id=1]
-[ext_resource path="res://game-objects/Character.tscn" type="PackedScene" id=2]
-[ext_resource path="res://game-objects/RespawnFlag.tscn" type="PackedScene" id=3]
-[ext_resource path="res://game-objects/Enemy.tscn" type="PackedScene" id=4]
-[ext_resource path="res://game-objects/Pizza.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scripts/GameManager.gd" type="Script" id=2]
+[ext_resource path="res://game-objects/Character.tscn" type="PackedScene" id=3]
+[ext_resource path="res://game-objects/RespawnFlag.tscn" type="PackedScene" id=4]
+[ext_resource path="res://game-objects/Enemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://game-objects/Pizza.tscn" type="PackedScene" id=6]
 
 [node name="Level_0" type="Node2D"]
 
@@ -37,17 +38,18 @@ format = 1
 tile_data = PoolIntArray( 0, 7274539, 0, 96, 0, 0, 97, 0, 0, 98, 0, 0, 100, 0, 0, 101, 0, 0, 102, 0, 0, 103, 0, 0, 112, 0, 0, 163, 0, 0, 166, 0, 0, 234, 0, 0, 235, 0, 0, 236, 0, 0, 237, 0, 0, 282, 0, 0, 3080182, 237, 0, 3145718, 237, 0, 3211254, 237, 0, 3276790, 237, 0, 3342326, 237, 0, 3407862, 237, 0, 4063285, 96, 0, 4063286, 97, 0, 4063287, 97, 0, 4063288, 97, 0, 4063289, 97, 0, 4063290, 97, 0, 4063291, 97, 0, 4063292, 97, 0, 4063293, 97, 0, 4063294, 97, 0, 4063295, 98, 0, 4128818, 96, 0, 4128819, 97, 0, 4128820, 97, 0, 4128821, 112, 0, 4128822, 100, 0, 4128823, 100, 0, 4128824, 100, 0, 4128825, 100, 0, 4128826, 100, 0, 4128827, 100, 0, 4128828, 100, 0, 4128829, 100, 0, 4128830, 100, 0, 4128831, 101, 0, 4194354, 102, 0, 4194355, 103, 0, 4194356, 103, 0, 4194357, 103, 0, 4194358, 103, 0, 4194359, 103, 0, 4194360, 103, 0, 4194361, 103, 0, 4194362, 103, 0, 4194363, 103, 0, 4194364, 103, 0, 4194365, 103, 0, 4194366, 103, 0, 4194367, 104, 0, 4259883, 113, 0, 4259884, 114, 0, 4259885, 114, 0, 4259886, 114, 0, 4259887, 115, 0, 4784135, 117, 0, 4849669, 105, 0, 4849670, 114, 0, 4849671, 108, 0, 4915205, 118, 0, 4980741, 99, 0, 4980742, 97, 0, 4980743, 97, 0, 4980744, 97, 0, 4980745, 97, 0, 4980746, 97, 0, 4980747, 98, 0, 5046277, 99, 0, 5046278, 100, 0, 5046279, 100, 0, 5046280, 100, 0, 5046281, 100, 0, 5046282, 100, 0, 5046283, 101, 0, 5111813, 99, 0, 5111814, 100, 0, 5111815, 100, 0, 5111816, 100, 0, 5111817, 100, 0, 5111818, 100, 0, 5111819, 101, 0, 5177349, 102, 0, 5177350, 103, 0, 5177351, 103, 0, 5177352, 103, 0, 5177353, 103, 0, 5177354, 103, 0, 5177355, 104, 0 )
 
 [node name="GameManager" type="Node2D" parent="."]
+script = ExtResource( 2 )
 
-[node name="Character" parent="." instance=ExtResource( 2 )]
+[node name="Character" parent="." instance=ExtResource( 3 )]
 position = Vector2( 30.9398, 1305.91 )
 z_index = 5
 
-[node name="RespawnFlag" parent="." instance=ExtResource( 3 )]
+[node name="RespawnFlag" parent="." instance=ExtResource( 4 )]
 position = Vector2( 33.5962, 1304.42 )
 
 [node name="Enemies" type="Node2D" parent="."]
 
-[node name="Enemy" parent="Enemies" instance=ExtResource( 4 )]
+[node name="Enemy" parent="Enemies" instance=ExtResource( 5 )]
 editor/display_folded = true
 position = Vector2( 149.573, 1108.41 )
 
@@ -57,5 +59,5 @@ position = Vector2( 149.573, 1108.41 )
 
 [node name="Pizzas" type="Node2D" parent="."]
 
-[node name="Pizza" parent="Pizzas" instance=ExtResource( 5 )]
+[node name="Pizza" parent="Pizzas" instance=ExtResource( 6 )]
 position = Vector2( 8.42816, 1192.38 )
