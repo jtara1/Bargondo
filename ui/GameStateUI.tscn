@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=2]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://fonts/The Delicate DEMO.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 100
+font_data = SubResource( 1 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "game_state_ui_banner"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.5, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ColorRect/RichTextLabel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.5, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="GameStateUI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -512.0
+margin_top = -120.0
+margin_right = 512.0
+margin_bottom = 120.0
+color = Color( 0, 0, 0, 0.301961 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect"]
+margin_right = 1024.0
+margin_bottom = 240.0
+custom_fonts/normal_font = SubResource( 2 )
+text = "
+     Time Exhausted!"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+playback_speed = 0.55
+anims/game_state_ui_banner = SubResource( 3 )
