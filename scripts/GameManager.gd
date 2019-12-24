@@ -15,7 +15,7 @@ func _on_Character_died(character):
 	var character_position = character.position
 	character.queue_free()
 	
-	var explosion = Explosion.instance()
+	explosion = Explosion.instance()
 	explosion.position = character_position
 	level_node.add_child(explosion)
 	
