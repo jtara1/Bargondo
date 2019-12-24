@@ -7,7 +7,7 @@ var target_index = 0
 onready var parent = $"../"
 onready var speed = parent.speed
 onready var movement_targets = [parent.position]
-onready var moveable = not not parent.init_delay_seconds
+onready var moveable = not parent.init_delay_seconds
 
 func _ready():
 	start_init_delay_timer()
