@@ -53,6 +53,7 @@ z_index = 5
 position = Vector2( 29.7814, 1310.96 )
 
 [node name="Enemies" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Enemy" parent="Enemies" instance=ExtResource( 5 )]
 editor/display_folded = true
@@ -486,7 +487,6 @@ position = Vector2( 696.748, 1184.36 )
 position = Vector2( 1046.37, 881.182 )
 
 [node name="ParkAreas" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="ParkArea" type="Area2D" parent="ParkAreas"]
 editor/display_folded = true
@@ -501,7 +501,7 @@ shape = SubResource( 1 )
 
 [node name="ParkArea2" type="Area2D" parent="ParkAreas"]
 editor/display_folded = true
-position = Vector2( 744.438, 912.353 )
+position = Vector2( 749.67, 916.021 )
 scale = Vector2( 19.1798, 0.278586 )
 script = ExtResource( 7 )
 
@@ -512,8 +512,8 @@ shape = SubResource( 1 )
 
 [node name="ParkArea3" type="Area2D" parent="ParkAreas"]
 editor/display_folded = true
-position = Vector2( 571.159, 1091.05 )
-scale = Vector2( 34.4247, -0.144269 )
+position = Vector2( 572.849, 1084.79 )
+scale = Vector2( 29.879, -0.125219 )
 script = ExtResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ParkAreas/ParkArea3"]
@@ -525,7 +525,7 @@ shape = SubResource( 1 )
 
 [node name="CityArea" type="Area2D" parent="CityAreas"]
 editor/display_folded = true
-position = Vector2( -176.295, 827.591 )
+position = Vector2( -176.295, 830.234 )
 scale = Vector2( 73.356, 0.2344 )
 script = ExtResource( 8 )
 
@@ -568,6 +568,7 @@ scale = Vector2( 0.860355, 19.2 )
 shape = SubResource( 1 )
 
 [node name="CityArea5" type="Area2D" parent="CityAreas"]
+editor/display_folded = true
 position = Vector2( 574.631, 957.017 )
 scale = Vector2( 30.9042, 1.17595 )
 script = ExtResource( 8 )
