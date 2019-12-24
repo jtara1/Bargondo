@@ -27,7 +27,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Bargondo: Sneky Pizza"
-run/main_scene="res://levels/Level_0.tscn"
+run/main_scene="res://levels/MainMenu.tscn"
 config/icon="res://icon.png"
 
 [autoload]

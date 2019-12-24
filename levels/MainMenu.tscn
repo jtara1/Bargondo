@@ -2,6 +2,7 @@
 
 [ext_resource path="res://scripts/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://sprites/background/ColorBG-1-Red-2048.png" type="Texture" id=2]
+[ext_resource path="res://fonts/The Delicate DEMO.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://fonts/The Delicate DEMO.ttf"
@@ -13,34 +14,32 @@ outline_color = Color( 0, 0, 0, 1 )
 use_filter = true
 font_data = SubResource( 1 )
 
-[sub_resource type="DynamicFontData" id=9]
-font_path = "res://fonts/The Delicate DEMO.ttf"
-
-[sub_resource type="DynamicFont" id=10]
-use_filter = true
-font_data = SubResource( 9 )
-
-[sub_resource type="Theme" id=11]
-default_font = SubResource( 10 )
-
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0.54902, 0.407843, 0.231373, 1 )
 
-[sub_resource type="StyleBoxFlat" id=6]
+[sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.0901961, 0.74902, 0.243137, 1 )
 
-[sub_resource type="DynamicFontData" id=3]
+[sub_resource type="DynamicFontData" id=8]
 font_path = "res://fonts/The Delicate DEMO.ttf"
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=9]
 size = 54
-font_data = SubResource( 3 )
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 8 )
 
-[sub_resource type="StyleBoxFlat" id=7]
+[sub_resource type="StyleBoxFlat" id=10]
 bg_color = Color( 0.258824, 0.956863, 0.619608, 1 )
 
-[sub_resource type="StyleBoxFlat" id=8]
+[sub_resource type="StyleBoxFlat" id=11]
 bg_color = Color( 0.94902, 0.266667, 0.0196078, 1 )
+
+[sub_resource type="DynamicFont" id=12]
+font_data = ExtResource( 3 )
+
+[sub_resource type="Theme" id=13]
+default_font = SubResource( 12 )
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -62,21 +61,62 @@ custom_fonts/normal_font = SubResource( 2 )
 text = "
  Bargondo: Sneky Pizza"
 
-[node name="CenterContainer2" type="CenterContainer" parent="TextureRect"]
+[node name="CenterContainer" type="CenterContainer" parent="TextureRect"]
+margin_top = 113.064
 margin_right = 1024.0
-margin_bottom = 600.0
+margin_bottom = 713.064
 rect_scale = Vector2( 2, 2 )
 
-[node name="AcceptDialog" type="AcceptDialog" parent="TextureRect/CenterContainer2"]
-margin_left = 11.0
-margin_top = 22.0
-margin_right = 1013.0
-margin_bottom = 578.0
-theme = SubResource( 11 )
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/CenterContainer"]
+margin_left = 396.0
+margin_top = 105.0
+margin_right = 628.0
+margin_bottom = 495.0
+custom_constants/separation = 15
+
+[node name="Start" type="Button" parent="TextureRect/CenterContainer/VBoxContainer"]
+margin_right = 232.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 0, 120 )
+custom_styles/hover = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+custom_fonts/font = SubResource( 9 )
+custom_constants/hseparation = 70
+text = "Start"
+
+[node name="About" type="Button" parent="TextureRect/CenterContainer/VBoxContainer"]
+margin_top = 135.0
+margin_right = 232.0
+margin_bottom = 255.0
+rect_min_size = Vector2( 0, 120 )
+custom_styles/hover = SubResource( 6 )
+custom_styles/normal = SubResource( 10 )
+custom_fonts/font = SubResource( 9 )
+custom_constants/hseparation = 70
+text = "  About  "
+
+[node name="Quit" type="Button" parent="TextureRect/CenterContainer/VBoxContainer"]
+margin_top = 270.0
+margin_right = 232.0
+margin_bottom = 390.0
+rect_min_size = Vector2( 0, 120 )
+custom_styles/hover = SubResource( 6 )
+custom_styles/normal = SubResource( 11 )
+custom_fonts/font = SubResource( 9 )
+custom_constants/hseparation = 70
+text = "Quit"
+
+[node name="AcceptDialog" type="AcceptDialog" parent="TextureRect"]
+visible = true
+margin_right = 83.0
+margin_bottom = 58.0
+theme = SubResource( 13 )
 window_title = "About"
+resizable = true
 dialog_text = "Created by Josh (jalejr) and James (jtara1).                                                                                                                                                             
 
-Assets created by:
+Assets created by
+ https://github.com/jtara1/Bargondo/blob/master/CREDITS.md
 
 
 
@@ -101,51 +141,6 @@ Assets created by:
 
 
 "
-
-[node name="CenterContainer" type="CenterContainer" parent="TextureRect"]
-margin_top = 113.064
-margin_right = 1024.0
-margin_bottom = 713.064
-rect_scale = Vector2( 2, 2 )
-
-[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/CenterContainer"]
-margin_left = 396.0
-margin_top = 105.0
-margin_right = 628.0
-margin_bottom = 495.0
-custom_constants/separation = 15
-
-[node name="Start" type="Button" parent="TextureRect/CenterContainer/VBoxContainer"]
-margin_right = 232.0
-margin_bottom = 120.0
-rect_min_size = Vector2( 0, 120 )
-custom_styles/hover = SubResource( 5 )
-custom_styles/normal = SubResource( 6 )
-custom_fonts/font = SubResource( 4 )
-custom_constants/hseparation = 70
-text = "Start"
-
-[node name="About" type="Button" parent="TextureRect/CenterContainer/VBoxContainer"]
-margin_top = 135.0
-margin_right = 232.0
-margin_bottom = 255.0
-rect_min_size = Vector2( 0, 120 )
-custom_styles/hover = SubResource( 5 )
-custom_styles/normal = SubResource( 7 )
-custom_fonts/font = SubResource( 4 )
-custom_constants/hseparation = 70
-text = "  About  "
-
-[node name="Quit" type="Button" parent="TextureRect/CenterContainer/VBoxContainer"]
-margin_top = 270.0
-margin_right = 232.0
-margin_bottom = 390.0
-rect_min_size = Vector2( 0, 120 )
-custom_styles/hover = SubResource( 5 )
-custom_styles/normal = SubResource( 8 )
-custom_fonts/font = SubResource( 4 )
-custom_constants/hseparation = 70
-text = "Quit"
 [connection signal="pressed" from="TextureRect/CenterContainer/VBoxContainer/Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="TextureRect/CenterContainer/VBoxContainer/About" to="." method="_on_About_pressed"]
 [connection signal="pressed" from="TextureRect/CenterContainer/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
