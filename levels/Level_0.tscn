@@ -56,7 +56,7 @@ position = Vector2( 29.7814, 1310.96 )
 
 [node name="Enemy" parent="Enemies" instance=ExtResource( 5 )]
 editor/display_folded = true
-position = Vector2( 25.7675, 1219.06 )
+position = Vector2( 69.8847, 1207.72 )
 
 [node name="MovementTargets" type="Node2D" parent="Enemies/Enemy"]
 
@@ -66,6 +66,7 @@ position = Vector2( 25.7675, 1219.06 )
 editor/display_folded = true
 position = Vector2( 292.723, 1067.97 )
 speed = 1.2
+init_delay_seconds = 0.1
 
 [node name="MovementTargets" type="Node2D" parent="Enemies/Enemy2"]
 
@@ -78,6 +79,7 @@ position = Vector2( -123.201, 0 )
 editor/display_folded = true
 position = Vector2( 292.723, 1083.71 )
 speed = 1.2
+init_delay_seconds = 0.2
 
 [node name="MovementTargets" type="Node2D" parent="Enemies/Enemy3"]
 
@@ -90,6 +92,7 @@ position = Vector2( -123.201, 0 )
 editor/display_folded = true
 position = Vector2( 292.723, 1100.49 )
 speed = 1.2
+init_delay_seconds = 0.3
 
 [node name="MovementTargets" type="Node2D" parent="Enemies/Enemy4"]
 
@@ -98,13 +101,389 @@ speed = 1.2
 [node name="Node2D2" type="Node2D" parent="Enemies/Enemy4/MovementTargets"]
 position = Vector2( -123.201, 0 )
 
+[node name="Enemy5" parent="Enemies" instance=ExtResource( 5 )]
+editor/display_folded = true
+position = Vector2( 652.294, 1117.74 )
+speed = 1.2
+
+[node name="MovementTargets" type="Node2D" parent="Enemies/Enemy5"]
+
+[node name="Node2D" type="Node2D" parent="Enemies/Enemy5/MovementTargets"]
+position = Vector2( 194.581, 25.9442 )
+
+[node name="Node2D2" type="Node2D" parent="Enemies/Enemy5/MovementTargets"]
+position = Vector2( -167.213, 31.5037 )
+
+[node name="Enemy6" parent="Enemies" instance=ExtResource( 5 )]
+editor/display_folded = true
+position = Vector2( 98.774, 900.153 )
+speed = 1.2
+
+[node name="MovementTargets" type="Node2D" parent="Enemies/Enemy6"]
+
+[node name="Node2D" type="Node2D" parent="Enemies/Enemy6/MovementTargets"]
+position = Vector2( 5.14561, 118.349 )
+
+[node name="Node2D2" type="Node2D" parent="Enemies/Enemy6/MovementTargets"]
+position = Vector2( 5.43922, -27.1982 )
+
+[node name="Enemy7" parent="Enemies" instance=ExtResource( 5 )]
+editor/display_folded = true
+position = Vector2( -107.785, 904.563 )
+speed = 1.2
+init_delay_seconds = 0.3
+
+[node name="MovementTargets" type="Node2D" parent="Enemies/Enemy7"]
+
+[node name="Node2D" type="Node2D" parent="Enemies/Enemy7/MovementTargets"]
+position = Vector2( 5.14561, 118.349 )
+
+[node name="Node2D2" type="Node2D" parent="Enemies/Enemy7/MovementTargets"]
+position = Vector2( 6.90939, -28.6684 )
+
+[node name="Enemy8" parent="Enemies" instance=ExtResource( 5 )]
+editor/display_folded = true
+position = Vector2( -17.5662, 1013.8 )
+speed = 1.2
+init_delay_seconds = 0.5
+
+[node name="MovementTargets" type="Node2D" parent="Enemies/Enemy8"]
+
+[node name="Node2D" type="Node2D" parent="Enemies/Enemy8/MovementTargets"]
+position = Vector2( -85.5613, 2.2832 )
+
+[node name="Node2D2" type="Node2D" parent="Enemies/Enemy8/MovementTargets"]
+position = Vector2( 92.7396, 4.00562 )
+
+[node name="Enemy9" parent="Enemies" instance=ExtResource( 5 )]
+editor/display_folded = true
+position = Vector2( -154.499, 1019.04 )
+speed = 1.2
+init_delay_seconds = 0.3
+
+[node name="MovementTargets" type="Node2D" parent="Enemies/Enemy9"]
+
+[node name="Node2D" type="Node2D" parent="Enemies/Enemy9/MovementTargets"]
+position = Vector2( 0.0122375, 129.129 )
+
+[node name="Node2D2" type="Node2D" parent="Enemies/Enemy9/MovementTargets"]
+position = Vector2( 0.749321, -29.1818 )
+
+[node name="Enemy10" parent="Enemies" instance=ExtResource( 5 )]
+editor/display_folded = true
+position = Vector2( -137.559, 1019.55 )
+speed = 1.2
+init_delay_seconds = 1.0
+
+[node name="MovementTargets" type="Node2D" parent="Enemies/Enemy10"]
+
+[node name="Node2D" type="Node2D" parent="Enemies/Enemy10/MovementTargets"]
+position = Vector2( 0.0122375, 129.129 )
+
+[node name="Node2D2" type="Node2D" parent="Enemies/Enemy10/MovementTargets"]
+position = Vector2( 0.749321, -29.1818 )
+
+[node name="Enemy11" parent="Enemies" instance=ExtResource( 5 )]
+editor/display_folded = true
+position = Vector2( -120.106, 1017.5 )
+speed = 1.2
+init_delay_seconds = 0.6
+
+[node name="MovementTargets" type="Node2D" parent="Enemies/Enemy11"]
+
+[node name="Node2D" type="Node2D" parent="Enemies/Enemy11/MovementTargets"]
+position = Vector2( 0.0122375, 129.129 )
+
+[node name="Node2D2" type="Node2D" parent="Enemies/Enemy11/MovementTargets"]
+position = Vector2( 0.749321, -29.1818 )
+
+[node name="Enemy12" parent="Enemies" instance=ExtResource( 5 )]
+editor/display_folded = true
+position = Vector2( 113.085, 1288.51 )
+speed = 1.2
+init_delay_seconds = 0.6
+
+[node name="MovementTargets" type="Node2D" parent="Enemies/Enemy12"]
+
+[node name="Node2D" type="Node2D" parent="Enemies/Enemy12/MovementTargets"]
+position = Vector2( 97.0701, -1.96207 )
+
+[node name="Node2D2" type="Node2D" parent="Enemies/Enemy12/MovementTargets"]
+position = Vector2( -18.7883, 0.439781 )
+
+[node name="Enemy13" parent="Enemies" instance=ExtResource( 5 )]
+editor/display_folded = true
+position = Vector2( 73.3794, 1326.95 )
+speed = 1.2
+init_delay_seconds = 0.6
+
+[node name="MovementTargets" type="Node2D" parent="Enemies/Enemy13"]
+
+[node name="Node2D" type="Node2D" parent="Enemies/Enemy13/MovementTargets"]
+position = Vector2( 2.53317, 74.2977 )
+
+[node name="Node2D2" type="Node2D" parent="Enemies/Enemy13/MovementTargets"]
+position = Vector2( 0.119072, -9.6442 )
+
+[node name="Enemy14" parent="Enemies" instance=ExtResource( 5 )]
+editor/display_folded = true
+position = Vector2( -120.736, 1320.02 )
+speed = 1.2
+init_delay_seconds = 0.3
+
+[node name="MovementTargets" type="Node2D" parent="Enemies/Enemy14"]
+
+[node name="Node2D" type="Node2D" parent="Enemies/Enemy14/MovementTargets"]
+position = Vector2( 64.9275, -1.33182 )
+
+[node name="Node2D2" type="Node2D" parent="Enemies/Enemy14/MovementTargets"]
+position = Vector2( -32.6537, 0.439659 )
+
+[node name="Enemy15" parent="Enemies" instance=ExtResource( 5 )]
+editor/display_folded = true
+position = Vector2( -120.106, 1354.68 )
+speed = 1.2
+init_delay_seconds = 0.1
+
+[node name="MovementTargets" type="Node2D" parent="Enemies/Enemy15"]
+
+[node name="Node2D" type="Node2D" parent="Enemies/Enemy15/MovementTargets"]
+position = Vector2( 115.977, -0.0713196 )
+
+[node name="Node2D2" type="Node2D" parent="Enemies/Enemy15/MovementTargets"]
+position = Vector2( -32.6537, 0.439659 )
+
+[node name="Enemy16" parent="Enemies" instance=ExtResource( 5 )]
+editor/display_folded = true
+position = Vector2( 136.404, 1207.83 )
+speed = 1.2
+init_delay_seconds = 0.1
+
+[node name="MovementTargets" type="Node2D" parent="Enemies/Enemy16"]
+
+[node name="Node2D" type="Node2D" parent="Enemies/Enemy16/MovementTargets"]
+position = Vector2( 51.6923, -0.0713196 )
+
+[node name="Node2D2" type="Node2D" parent="Enemies/Enemy16/MovementTargets"]
+position = Vector2( -32.6537, 0.439659 )
+
+[node name="Enemy17" parent="Enemies" instance=ExtResource( 5 )]
+editor/display_folded = true
+position = Vector2( 222.799, 1323.98 )
+speed = 1.2
+init_delay_seconds = 0.1
+
+[node name="MovementTargets" type="Node2D" parent="Enemies/Enemy17"]
+
+[node name="Node2D" type="Node2D" parent="Enemies/Enemy17/MovementTargets"]
+position = Vector2( 51.6923, -0.0713196 )
+
+[node name="Node2D2" type="Node2D" parent="Enemies/Enemy17/MovementTargets"]
+position = Vector2( -124.067, -1.71134 )
+
+[node name="Enemy18" parent="Enemies" instance=ExtResource( 5 )]
+editor/display_folded = true
+position = Vector2( -27.472, 1179.51 )
+speed = 1.2
+init_delay_seconds = 0.1
+
+[node name="MovementTargets" type="Node2D" parent="Enemies/Enemy18"]
+
+[node name="Node2D" type="Node2D" parent="Enemies/Enemy18/MovementTargets"]
+position = Vector2( 101.178, -1.20889 )
+
+[node name="Node2D2" type="Node2D" parent="Enemies/Enemy18/MovementTargets"]
+position = Vector2( -124.067, -1.71134 )
+
+[node name="Enemy19" parent="Enemies" instance=ExtResource( 5 )]
+editor/display_folded = true
+position = Vector2( -48.5174, 1215.34 )
+speed = 1.2
+init_delay_seconds = 0.1
+
+[node name="MovementTargets" type="Node2D" parent="Enemies/Enemy19"]
+
+[node name="Node2D" type="Node2D" parent="Enemies/Enemy19/MovementTargets"]
+position = Vector2( 1.0694, -21.1169 )
+
+[node name="Node2D2" type="Node2D" parent="Enemies/Enemy19/MovementTargets"]
+position = Vector2( -0.0693817, 88.7274 )
+
+[node name="Enemy20" parent="Enemies" instance=ExtResource( 5 )]
+editor/display_folded = true
+position = Vector2( 390.036, 1059.38 )
+speed = 1.5
+init_delay_seconds = 0.1
+
+[node name="MovementTargets" type="Node2D" parent="Enemies/Enemy20"]
+
+[node name="Node2D" type="Node2D" parent="Enemies/Enemy20/MovementTargets"]
+position = Vector2( 1.0694, -21.1169 )
+
+[node name="Node2D2" type="Node2D" parent="Enemies/Enemy20/MovementTargets"]
+position = Vector2( -7.05272, 342.222 )
+
+[node name="Enemy21" parent="Enemies" instance=ExtResource( 5 )]
+editor/display_folded = true
+position = Vector2( 506.134, 1077.96 )
+init_delay_seconds = 0.1
+
+[node name="MovementTargets" type="Node2D" parent="Enemies/Enemy21"]
+
+[node name="Node2D" type="Node2D" parent="Enemies/Enemy21/MovementTargets"]
+position = Vector2( 1.0694, -21.1169 )
+
+[node name="Node2D2" type="Node2D" parent="Enemies/Enemy21/MovementTargets"]
+position = Vector2( -7.05272, 342.222 )
+
+[node name="Enemy22" parent="Enemies" instance=ExtResource( 5 )]
+editor/display_folded = true
+position = Vector2( 534.661, 1077.96 )
+init_delay_seconds = 0.3
+
+[node name="MovementTargets" type="Node2D" parent="Enemies/Enemy22"]
+
+[node name="Node2D" type="Node2D" parent="Enemies/Enemy22/MovementTargets"]
+position = Vector2( 1.0694, -21.1169 )
+
+[node name="Node2D2" type="Node2D" parent="Enemies/Enemy22/MovementTargets"]
+position = Vector2( -7.05272, 342.222 )
+
+[node name="Enemy23" parent="Enemies" instance=ExtResource( 5 )]
+editor/display_folded = true
+position = Vector2( 404.713, 1370.1 )
+init_delay_seconds = 0.3
+
+[node name="MovementTargets" type="Node2D" parent="Enemies/Enemy23"]
+
+[node name="Node2D" type="Node2D" parent="Enemies/Enemy23/MovementTargets"]
+position = Vector2( -81.7235, -72.0124 )
+
+[node name="Node2D2" type="Node2D" parent="Enemies/Enemy23/MovementTargets"]
+position = Vector2( 60.8272, -87.1849 )
+
+[node name="Enemy24" parent="Enemies" instance=ExtResource( 5 )]
+editor/display_folded = true
+position = Vector2( 713.45, 1138.55 )
+init_delay_seconds = 0.3
+
+[node name="MovementTargets" type="Node2D" parent="Enemies/Enemy24"]
+
+[node name="Node2D" type="Node2D" parent="Enemies/Enemy24/MovementTargets"]
+position = Vector2( -166.259, -0.708893 )
+
+[node name="Node2D2" type="Node2D" parent="Enemies/Enemy24/MovementTargets"]
+position = Vector2( 132.131, -1.17969 )
+
+[node name="Enemy25" parent="Enemies" instance=ExtResource( 5 )]
+editor/display_folded = true
+position = Vector2( 840.62, 1253.95 )
+init_delay_seconds = 0.3
+
+[node name="MovementTargets" type="Node2D" parent="Enemies/Enemy25"]
+
+[node name="Node2D" type="Node2D" parent="Enemies/Enemy25/MovementTargets"]
+position = Vector2( 1.34158, -91.1247 )
+
+[node name="Node2D2" type="Node2D" parent="Enemies/Enemy25/MovementTargets"]
+position = Vector2( 2.75517, 139.957 )
+
+[node name="Enemy26" parent="Enemies" instance=ExtResource( 5 )]
+editor/display_folded = true
+position = Vector2( 552.001, 1205.98 )
+init_delay_seconds = 0.3
+
+[node name="MovementTargets" type="Node2D" parent="Enemies/Enemy26"]
+
+[node name="Node2D" type="Node2D" parent="Enemies/Enemy26/MovementTargets"]
+position = Vector2( -0.247223, -45.4463 )
+
+[node name="Node2D2" type="Node2D" parent="Enemies/Enemy26/MovementTargets"]
+position = Vector2( 0.81041, 74.7388 )
+
+[node name="Enemy27" parent="Enemies" instance=ExtResource( 5 )]
+editor/display_folded = true
+position = Vector2( 788.7, 901.654 )
+init_delay_seconds = 0.3
+
+[node name="MovementTargets" type="Node2D" parent="Enemies/Enemy27"]
+
+[node name="Node2D" type="Node2D" parent="Enemies/Enemy27/MovementTargets"]
+position = Vector2( -0.908844, -45.3728 )
+
+[node name="Node2D2" type="Node2D" parent="Enemies/Enemy27/MovementTargets"]
+position = Vector2( 1.5822, 49.9296 )
+
+[node name="Enemy28" parent="Enemies" instance=ExtResource( 5 )]
+editor/display_folded = true
+position = Vector2( 843.096, 900.919 )
+init_delay_seconds = 0.5
+
+[node name="MovementTargets" type="Node2D" parent="Enemies/Enemy28"]
+
+[node name="Node2D" type="Node2D" parent="Enemies/Enemy28/MovementTargets"]
+position = Vector2( 1.18613, -43.9762 )
+
+[node name="Node2D2" type="Node2D" parent="Enemies/Enemy28/MovementTargets"]
+position = Vector2( 0.883896, 51.3263 )
+
+[node name="Enemy29" parent="Enemies" instance=ExtResource( 5 )]
+editor/display_folded = true
+position = Vector2( 902.638, 900.919 )
+speed = 0.8
+init_delay_seconds = 0.3
+
+[node name="MovementTargets" type="Node2D" parent="Enemies/Enemy29"]
+
+[node name="Node2D" type="Node2D" parent="Enemies/Enemy29/MovementTargets"]
+position = Vector2( 1.18619, -51.6578 )
+
+[node name="Node2D2" type="Node2D" parent="Enemies/Enemy29/MovementTargets"]
+position = Vector2( 1.5822, 52.7229 )
+
+[node name="Enemy30" parent="Enemies" instance=ExtResource( 5 )]
+editor/display_folded = true
+position = Vector2( 965.121, 901.654 )
+init_delay_seconds = 0.2
+
+[node name="MovementTargets" type="Node2D" parent="Enemies/Enemy30"]
+
+[node name="Node2D" type="Node2D" parent="Enemies/Enemy30/MovementTargets"]
+position = Vector2( 0.487823, -49.5628 )
+
+[node name="Node2D2" type="Node2D" parent="Enemies/Enemy30/MovementTargets"]
+position = Vector2( 0.185593, 60.4046 )
+
+[node name="Enemy31" parent="Enemies" instance=ExtResource( 5 )]
+editor/display_folded = true
+position = Vector2( 635.801, 945.759 )
+init_delay_seconds = 0.2
+
+[node name="MovementTargets" type="Node2D" parent="Enemies/Enemy31"]
+
+[node name="Node2D" type="Node2D" parent="Enemies/Enemy31/MovementTargets"]
+position = Vector2( 0.487823, -75.5849 )
+
+[node name="Node2D2" type="Node2D" parent="Enemies/Enemy31/MovementTargets"]
+position = Vector2( -1.39485, 151.923 )
+
 [node name="Pizzas" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Pizza" parent="Pizzas" instance=ExtResource( 6 )]
 position = Vector2( 8.42816, 1192.38 )
 
 [node name="Pizza2" parent="Pizzas" instance=ExtResource( 6 )]
 position = Vector2( 260.253, 1073.99 )
+
+[node name="Pizza3" parent="Pizzas" instance=ExtResource( 6 )]
+position = Vector2( 233.055, 879.192 )
+
+[node name="Pizza4" parent="Pizzas" instance=ExtResource( 6 )]
+position = Vector2( 696.748, 1184.36 )
+
+[node name="Pizza5" parent="Pizzas" instance=ExtResource( 6 )]
+position = Vector2( 1046.37, 881.182 )
 
 [node name="ParkAreas" type="Node2D" parent="."]
 editor/display_folded = true
@@ -143,7 +522,6 @@ scale = Vector2( 0.860355, 19.2 )
 shape = SubResource( 1 )
 
 [node name="CityAreas" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="CityArea" type="Area2D" parent="CityAreas"]
 editor/display_folded = true
@@ -190,7 +568,6 @@ scale = Vector2( 0.860355, 19.2 )
 shape = SubResource( 1 )
 
 [node name="CityArea5" type="Area2D" parent="CityAreas"]
-editor/display_folded = true
 position = Vector2( 574.631, 957.017 )
 scale = Vector2( 30.9042, 1.17595 )
 script = ExtResource( 8 )
