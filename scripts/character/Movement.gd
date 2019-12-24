@@ -2,15 +2,14 @@ extends Node2D
 
 onready var parent = $"../"
 onready var animation_player = $"../AnimationPlayer"
-onready var speed = parent.speed
 
 var movement = Vector2()
 
 func _ready():
-	animation_player.playback_speed = 0.03 * speed
+	animation_player.playback_speed = 0.03 * parent.speed
 
 func _physics_process(delta):
-	parent.move_and_slide(movement * speed)
+	parent.move_and_slide(movement * parent.speed)
 
 func _process(delta):
 	read_inputs()

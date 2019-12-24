@@ -12,4 +12,7 @@ func consume(item):
 	item.queue_free()
 	
 func get_speed():
-	return speed * $CharacterCamo.camo.get_speed_mult()
+#	return speed * $CharacterCamo.camo.get_speed_mult()
+	var spd = speed * $CharacterCamo.camo.get_speed_mult()
+	print(spd)
+	return spd
