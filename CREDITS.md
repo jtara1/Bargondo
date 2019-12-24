@@ -7,3 +7,4 @@
 | Explosion | TinyWorlds | https://opengameart.org/content/explosion-0 | explosion sound|
 | Fantrozzi's Footsteps(Grass/Sand) | Fantozzi | https://opengameart.org/content/fantozzis-footsteps-grasssand-stone | footstep sounds |
 | Hungry Dino (9 chiptune tracks, 10 SFX) | SketchyLogic | https://opengameart.org/content/hungry-dino-9-chiptune-tracks-10-sfx | music |
+| Rabbit Eating | Voltiment555 | https://opengameart.org/content/rabbit-eating | collectable collected sound |
