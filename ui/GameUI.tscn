@@ -36,7 +36,6 @@ margin_top = -120.0
 margin_bottom = -40.0
 
 [node name="PizzaPanel" type="Panel" parent="NinePatchRect"]
-editor/display_folded = true
 self_modulate = Color( 1, 1, 1, 0.380392 )
 margin_left = 9.7054
 margin_top = -26.4089

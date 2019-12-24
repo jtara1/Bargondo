@@ -1,8 +1,10 @@
 extends Control
 
 signal game_timer_ended
+signal all_pizzas_collected
 
 var pizza_count = 0
+var pizzas_on_map = 4 # TODO: have this in a singleton
 
 onready var character = $"../../"
 onready var text_label = $NinePatchRect/PizzaPanel/RichTextLabel
@@ -13,7 +15,10 @@ func _ready():
 
 func change_pizza_count(amount):
 	pizza_count += amount
-	text_label.text = str(pizza_count) + "/3"
+	text_label.text = str(pizza_count) + "/" + str(pizzas_on_map)
+	
+	if pizza_count >= pizzas_on_map:
+		emit_signal("all_pizzas_collected")
 
 func _on_Character_item_consumed(item):
 	if item is Pizza: change_pizza_count(1)
