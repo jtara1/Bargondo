@@ -3,24 +3,20 @@ extends Node2D
 export(float) var close_enough_to_target_threshold = 25
 
 var target_index = 0
-var moveable = false
 
 onready var parent = $"../"
 onready var speed = parent.speed
 onready var movement_targets = [parent.position]
+onready var moveable = not not parent.init_delay_seconds
 
 func _ready():
-	var timer = Timer.new()
-	timer.wait_time = parent.init_delay_seconds
-	timer.one_shot = true
-	timer.connect("timeout", self, "_on_InitWaitTimer_timeout")
-	timer.start()
-	
+	start_init_delay_timer()
 	load_movement_targets()
 
 func _physics_process(delta):
-	var target = get_movement_target_position()
-	parent.position = parent.position.linear_interpolate(target, delta * speed)
+	if moveable:
+		var target = get_movement_target_position()
+		parent.position = parent.position.linear_interpolate(target, delta * speed)
 	
 func get_movement_target_position():
 	var delta_position = parent.position - get_movement_target()
@@ -48,6 +44,15 @@ func load_movement_targets():
 		
 	for child in targets_container.get_children():
 		movement_targets.append(child.global_position)
+
+func start_init_delay_timer():
+	var timer = Timer.new()
+	timer.wait_time = parent.init_delay_seconds
+	timer.one_shot = true
+	timer.connect("timeout", self, "_on_InitWaitTimer_timeout")
+	
+	add_child(timer)
+	timer.start()
 
 func _on_InitWaitTimer_timeout():
 	moveable = true

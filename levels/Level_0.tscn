@@ -63,6 +63,7 @@ position = Vector2( 25.7675, 1219.06 )
 [node name="Node2D" type="Node2D" parent="Enemies/Enemy/MovementTargets"]
 
 [node name="Enemy2" parent="Enemies" instance=ExtResource( 5 )]
+editor/display_folded = true
 position = Vector2( 292.723, 1067.97 )
 speed = 1.2
 
@@ -74,6 +75,7 @@ speed = 1.2
 position = Vector2( -123.201, 0 )
 
 [node name="Enemy3" parent="Enemies" instance=ExtResource( 5 )]
+editor/display_folded = true
 position = Vector2( 292.723, 1083.71 )
 speed = 1.2
 
@@ -85,6 +87,7 @@ speed = 1.2
 position = Vector2( -123.201, 0 )
 
 [node name="Enemy4" parent="Enemies" instance=ExtResource( 5 )]
+editor/display_folded = true
 position = Vector2( 292.723, 1100.49 )
 speed = 1.2
 
