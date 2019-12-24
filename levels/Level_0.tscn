@@ -42,11 +42,11 @@ tile_data = PoolIntArray( 0, 7274539, 0, 96, 0, 0, 97, 0, 0, 98, 0, 0, 100, 0, 0
 script = ExtResource( 2 )
 
 [node name="Character" parent="." instance=ExtResource( 3 )]
-position = Vector2( 30.9398, 1305.91 )
+position = Vector2( 127.962, 1127.27 )
 z_index = 5
 
 [node name="RespawnFlag" parent="." instance=ExtResource( 4 )]
-position = Vector2( 33.5962, 1304.42 )
+position = Vector2( 128.052, 1126.8 )
 
 [node name="Enemies" type="Node2D" parent="."]
 

@@ -21,18 +21,14 @@ func _on_Character_died(character):
 	
 	var anim_player = explosion.get_node("AnimationPlayer")
 	anim_player.connect("animation_finished", self, "_on_Explosion_animation_finished")
-	anim_player.play("explosion")
-	return
-	
+
 func _on_Explosion_animation_finished(anim_name):
-	print('expl done')
 	if explosion: explosion.queue_free()
 	
-	var character = Character.instance()
-	character.position = respawn_flag.position
+	var new_character = Character.instance()
+	new_character.position = respawn_flag.position
 	
-	character.queue_free()
-	level_node.add_child(character)
+	self.character.queue_free()
+	level_node.add_child(new_character)
 	
-	self.character = character
-	
+	self.character = new_character

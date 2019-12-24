@@ -7,6 +7,8 @@ signal died
 
 export(float) var speed = 150 setget , get_speed
 
+var is_dead = false
+
 func _physics_process(delta):
 	process_collisions()
 
@@ -26,4 +28,6 @@ func process_collisions():
 			die()
 
 func die():
-	emit_signal("died", self)
+	if not is_dead: 
+		emit_signal("died", self)
+		is_dead = true
