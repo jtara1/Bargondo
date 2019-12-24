@@ -25,7 +25,7 @@ position = Vector2( 30.9398, 1305.91 )
 z_index = 5
 
 [node name="DetailsMap" type="TileMap" parent="."]
-z_index = 4
+z_index = 8
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
 cell_quadrant_size = 8
