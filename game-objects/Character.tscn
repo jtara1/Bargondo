@@ -1,10 +1,13 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scripts/character/Character.gd" type="Script" id=1]
 [ext_resource path="res://sprites/background/tilemap.png" type="Texture" id=2]
-[ext_resource path="res://scripts/character/Movement.gd" type="Script" id=3]
-[ext_resource path="res://animations/Character/walk_left.tres" type="Animation" id=4]
-[ext_resource path="res://ui/GameUI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scripts/character/CharacterCamo.gd" type="Script" id=3]
+[ext_resource path="res://scripts/character/Movement.gd" type="Script" id=4]
+[ext_resource path="res://animations/Character/camo_walk.tres" type="Animation" id=5]
+[ext_resource path="res://animations/Character/walk_left.tres" type="Animation" id=6]
+[ext_resource path="res://scripts/character/AnimationPlayer.gd" type="Script" id=7]
+[ext_resource path="res://ui/GameUI.tscn" type="PackedScene" id=8]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 7.35147
@@ -72,14 +75,19 @@ vframes = 18
 hframes = 27
 frame = 24
 
-[node name="Movement" type="Node2D" parent="."]
+[node name="CharacterCamo" type="Node2D" parent="."]
 script = ExtResource( 3 )
 
+[node name="Movement" type="Node2D" parent="."]
+script = ExtResource( 4 )
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/camo_walk = ExtResource( 5 )
 anims/walk_down = SubResource( 2 )
-anims/walk_left = ExtResource( 4 )
+anims/walk_left = ExtResource( 6 )
 anims/walk_right = SubResource( 3 )
 anims/walk_up = SubResource( 4 )
+script = ExtResource( 7 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
@@ -88,4 +96,4 @@ smoothing_enabled = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="GameUI" parent="CanvasLayer" instance=ExtResource( 5 )]
+[node name="GameUI" parent="CanvasLayer" instance=ExtResource( 8 )]

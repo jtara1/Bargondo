@@ -1,6 +1,7 @@
 const CAMOS = {
 	"none": { 
-		"speed_mult": 1 
+		"speed_mult": 1,
+		"sprite_frame": 24,
 	},
 	"tree": { 
 		"speed_mult": 0.25,
@@ -9,11 +10,11 @@ const CAMOS = {
 	"trash_can": { 
 		"speed_mult": 0.25,
 		"sprite_frame": 280,
-	}
+	},
 }
 
 var type = "none"
-var paramters = CAMOS[type]
+var parameters = CAMOS[type]
 
 func _init(camo_type = "none"):
 	self.type = camo_type
