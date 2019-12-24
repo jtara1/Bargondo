@@ -55,3 +55,8 @@ script = ExtResource( 8 )
 [node name="ColorPlayer" type="AnimationPlayer" parent="."]
 autoplay = "glow_red"
 anims/glow_red = SubResource( 2 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2( 0.426874, -0.128062 )
+color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( -4, -1, 4, -1, 4, 1, -4, 1 )
